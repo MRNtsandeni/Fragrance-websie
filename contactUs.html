@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="Contact Information" content="Get in touch with ScentLogic">
+    <title>Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="./images/SL.png">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <script>
+        function validateForm(event) {
+            
+            const firstName = document.getElementById("firstname").value.trim();
+            const surname = document.getElementById("Surname").value.trim();
+            const phoneNumber = document.getElementById("PhoneNumber").value.trim();
+            const email = document.getElementById("Email").value.trim();
+    
+            if (!firstName) {
+                alert("Please enter your first name.");
+                return false;
+            }
+    
+            if (!surname) {
+                alert("Please enter your surname.");
+                return false;
+            }
+    
+            if (!phoneNumber) {
+                alert("Please enter your phone number.");
+                return false;
+            }
+    
+            if (!/^\d{10}$/.test(phoneNumber)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+    
+            if (!email) {
+                alert("Please enter your email.");
+                return false;
+            }
+    
+            if (!email.includes("@")) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+    
+            alert("Form submitted successfully, Thank You");
+            return true; 
+        }
+    
+        function clearField(field) {
+            field.value = ''; 
+        }
+    </script>
+    
+</head>
+
+<body>
+
+    <center>
+        <h1><i><a href="aboutUs.html" style="color: #d4af37; text-decoration: none;">Contact Us</a></i></h1>
+    </center>
+
+    <nav>
+
+        <a href="index.html">Home</a>
+        <a href="Men.html">For Him</a>
+        <a href="Women.html">For Her</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="contactUs.html">Contact Us</a>
+
+    </nav>
+
+    <center>
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h2>Find Us @</h2>
+                <p>Atterbury Road And, Lois Ave, Menlyn, Pretoria, 0063, South Africa</p>
+                <p>(+27) 012-764-9600</p>
+                <p>ScentLogic@gmail.com</p>
+            </div>
+
+            <div class="business-hours">
+                <h2>Business Hours</h2>
+                <p>Monday to Friday - 9:00 am to 5:00 pm</p>
+                <p>Saturday - 9:00 am to 1:00 pm</p>
+                <p>Sunday - Appointment only</p>
+            </div>
+
+        </div>
+    </center>
+
+    <center>
+
+        <div class="map-container">
+
+           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14370.120290668907!2d28.
+                  2804373!3d-25.786081!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9560c010d32e0f%3A0x8cb66b194c35
+                  c770!2sMenlyn%20Maine!5e0!3m2!1sen!2sza!4v1730117357676!5m2!1sen!2sza" width="600" 
+                  height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        
+           </iframe>
+        </div>
+
+    </center>
+
+    <center>
+        <form name="Cnt_Us" id="Cnt_Us" action="mailto:example@example.com" method="post" enctype="text/plain" onsubmit="return validateForm(event)">
+    
+            <label for="firstname">First Name</label> 
+            <input type="text" name="firstname" id="firstname" placeholder="Enter your first name" onclick="clearField(this)">
+    
+            <label for="Surname">Surname</label> 
+            <input type="text" name="Surname" id="Surname" placeholder="Enter your surname" onclick="clearField(this)">
+    
+            <label for="PhoneNumber">Phone Number</label> 
+            <input type="text" name="PhoneNumber" id="PhoneNumber" placeholder="Enter your phone number" onclick="clearField(this)">
+    
+            <label for="Email">Email</label> 
+            <input type="text" name="Email" id="Email" placeholder="Enter your email" onclick="clearField(this)">
+    
+            <input type="radio" id="ForHim" name="For_Him" value="Him">
+            <label for="ForHim">For Him</label><br>
+    
+            <input type="radio" id="ForHer" name="For_Him" value="Her">
+            <label for="ForHer">For Her</label><br>
+           
+            <input type="submit" value="Send Email" name="smail">
+            <input type="reset" value="Clear">
+    
+        </form>
+    </center>
+    
+
+    <button id="scrollTopBtn" onclick="scrollToTop()">🔝</button>
+
+    <script>
+
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            const btn = document.getElementById("scrollTopBtn");
+
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+
+        }
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+
+</body>
+</html> 

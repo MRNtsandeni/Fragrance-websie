@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Home" content="A warm welcome to any that come to see the various icon and luxurious fragrances ScentLogic has to offer">
+    <title>ScentLogic - Home</title>
+    <link rel="icon" type="image/x-icon" href="./images/SL.png">
+    <link rel="stylesheet" href="./css/styles.css">
+   
+    
+    <script>
+
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            const btn = document.getElementById("scrollTopBtn");
+
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+
+        }
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+    
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Men.html">For Him</a>
+        <a href="Women.html">For Her</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="contactUs.html">Contact Us</a>
+    </nav>
+
+    <div class="container">
+        <div class="text-content">
+            <h1><i>ScentLogic</i></h1>
+            <h2>Let us help you find your dream fragrance.</h2>
+            <p>Explore our exquisite collection of perfumes and find the scent that defines you.</p>
+
+            <div class="button-group">
+                <a href="Men.html">For Him</a>
+                <a href="Women.html">For Her</a>
+                <a href="contactUs.html">Contact us</a>
+                <a href="#googleForm">Newsletter</a>
+            </div>
+        </div>
+
+        <div class="image-content">
+            <img src="./images/hugo2.jpg" alt="Fragrance Collection" style="width: 100%; height: auto; object-fit: cover; border: none;">
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="google-form-container" id="googleForm"> 
+        <iframe 
+            src="https://docs.google.com/forms/d/e/1FAIpQLScpWBLx2Fi7UqGf5FNyqRQDWxpF5ObTPFF0vN3L0qMRZzWGtQ/viewform?embedded=true"
+            loading="lazy" style="width: 100%; height: 1000px; border: none;">Loading…
+        </iframe>
+    </div>
+
+    <button id="scrollTopBtn" onclick="scrollToTop()">🔝</button>
+
+</body>
+</html>
